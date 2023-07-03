@@ -2,85 +2,96 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Alien Pizza</title>
+    <title>AI Search</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
       /* Internal CSS */
       /* Add any additional styles you'd like here */
-      .header {
-          background-color: #FF0000;
+      .navbar {
+        background-color: #007bff;
+        font-family: 'Fredoka One', cursive;
       }
       .footer {
           background-color: #000000;
           color: #FFFFFF;
           text-align: center;
           padding: 10px;
+          font-family: 'Fredoka One', cursive;
       }
-      .menu {
-          margin-top: 30px;
-          margin-bottom: 30px;
+      .search-container {
+        margin-top: 100px;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
       }
-      .our-story {
-          margin-top: 30px;
-          margin-bottom: 30px;
+      .search-bar {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #007bff;
+        border-radius: 4px;
+        font-size: 20px;
+        font-family: 'Fredoka One', cursive;
       }
-      .info {
-          margin-top: 30px;
-          margin-bottom: 30px;
+      .search-button {
+        background-color: #007bff;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: 'Fredoka One', cursive;
+      }
+      .search-button:hover {
+        background-color: #0069d9;
+      }
+      .information {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-family: 'Fredoka One', cursive;
       }
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Alien Pizza</a>
+      <a class="navbar-brand" href="#">AI Search</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Order</a>
+            <a class="nav-link" href="#">Search</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Help</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Info</a>
+            <a class="nav-link" href="#">Chat</a>
           </li>
         </ul>
       </div>
     </nav>
     
-    <div class="header">
-      <h1>Welcome to Alien Pizza!</h1>
+    <div class="search-container">
+      <h1>AI Search</h1>
+      <form>
+        <input type="text" class="search-bar" placeholder="Search... For example: how do i make pizza what is lasagna etc. ">
+        <button type="submit" class="search-button">Search</button>
+      </form>
     </div>
     
-    <div class="container menu">
-      <h2>Menu</h2>
-      <ul>
-        <li>Pepperoni Pizza - $10.99</li>
-        <li>Cheese Pizza - $9.99</li>
-        <li>Veggie Pizza - $11.99</li>
-        <li>Hawaiian Pizza - $12.99</li>
-      </ul>
-    </div>
-    
-    <div class="container our-story">
-      <h2>Our Story</h2>
-      <p>Alien Pizza was founded in 2050 by a group of intergalactic foodies who wanted to bring the best pizza in the universe to earth. We use only the freshest ingredients and our secret sauce recipe has been passed down for generations.</p>
-    </div>
-    
-    <div class="container info">
-      <h2>Info</h2>
-      <ul>
-        <li>Address: 123 Pizza Nettics, Belfast, Northern Ireland, UK, BT0 0AP</li>
-        <li>Phone: 555-555-5555</li>
-        <li>Email: info@alienpizza.com</li>
-      </ul>
+    <div class="information">
+      <h2>How to Use AI Search</h2>
+      <p>Simply enter your search term into the search bar above and hit the "Search" button. Our AI-powered search engine will quickly return the most relevant results for your query.</p>
+      <p>AI Search is constantly learning and improving, so if you don't find what you're looking for on the first try, try again in a few days!</p>
     </div>
     
     <footer class="footer">
-      <p>&copy; 2023 Alien Pizza. All rights reserved.</p>
+      <p>&copy; 2023 AI Search. All rights reserved.</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
