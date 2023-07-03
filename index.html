@@ -1,101 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>AI Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Jive - Coffee Shop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-      /* Internal CSS */
-      /* Add any additional styles you'd like here */
-      .navbar {
-        background-color: #007bff;
-        font-family: 'Fredoka One', cursive;
-      }
-      .footer {
-          background-color: #000000;
-          color: #FFFFFF;
-          text-align: center;
-          padding: 10px;
-          font-family: 'Fredoka One', cursive;
-      }
-      .search-container {
-        margin-top: 100px;
-        text-align: center;
-        font-family: 'Fredoka One', cursive;
-      }
-      .search-bar {
-        width: 70%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid #007bff;
-        border-radius: 4px;
-        font-size: 20px;
-        font-family: 'Fredoka One', cursive;
-      }
-      .search-button {
-        background-color: #007bff;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 20px;
-        font-family: 'Fredoka One', cursive;
-      }
-      .search-button:hover {
-        background-color: #0069d9;
-      }
-      .information {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-family: 'Fredoka One', cursive;
-      }
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .jumbotron {
+            background-image: url('coffeeshop.jpg');
+            background-size: cover;
+            color: #fff;
+            text-shadow: 1px 1px #000;
+        }
+        .navbar {
+            background-color: #563d7c;
+            color: #fff;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-header {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #563d7c;
+            color: #fff;
+        }
+        .card-body {
+            font-size: 16px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .card-text {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #563d7c;
+            color: #fff;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #422c5a;
+            color: #fff;
+        }
+        footer {
+            background-color: #563d7c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
     </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">AI Search</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Search</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Chat</a>
-          </li>
-        </ul>
-      </div>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Java Jive</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    
-    <div class="search-container">
-      <h1>AI Search</h1>
-      <form>
-        <input type="text" class="search-bar" placeholder="Search... For example: how do i make pizza what is lasagna etc. ">
-        <button type="submit" class="search-button">Search</button>
-      </form>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Java Jive</h1>
+            <p class="lead">Where every cup is a masterpiece</p>
+            <a class="btn btn-lg" href="#">Order Now</a>
+        </div>
     </div>
-    
-    <div class="information">
-      <h2>How to Use AI Search</h2>
-      <p>Simply enter your search term into the search bar above and hit the "Search" button. Our AI-powered search engine will quickly return the most relevant results for your query.</p>
-      <p>AI Search is constantly learning and improving, so if you don't find what you're looking for on the first try, try again in a few days!</p>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Coffee</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Espresso</h5>
+                        <p class="card-text">Our espresso is made with freshly roasted beans and a touch of magic.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Tea</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Chai Tea</h5>
+                        <p class="card-text">Our chai tea is made with a blend of spices and black tea for a warm and comforting drink.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div.            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Pastries</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Croissant</h5>
+                        <p class="card-text">Our croissants are buttery, flaky, and made fresh every day.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <footer class="footer">
-      <p>&copy; 2023 AI Search. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Java Jive. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
